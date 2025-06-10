@@ -81,26 +81,21 @@ export const Header = () => (
         <div className="flex items-center space-x-8">
           <div className="font-bold text-xl text-gray-800">STEEM 3.0 USD</div>
           <div className="hidden md:flex items-center space-x-6 text-sm">
-            <span className="text-gray-600">STEEM: <span className="font-medium">{currencyData.STEEM}</span></span>
-            <span className="text-gray-600">SBD: <span className="font-medium">{currencyData.SBD}</span></span>
-            <span className="text-gray-600">TRON: <span className="font-medium">{currencyData.TRON}</span></span>
+            <span className="text-gray-600">STEEM: <span className="font-medium text-green-600">{currencyData.STEEM}</span></span>
+            <span className="text-gray-600">SBD: <span className="font-medium text-green-600">{currencyData.SBD}</span></span>
+            <span className="text-gray-600">TRON: <span className="font-medium text-green-600">{currencyData.TRON}</span></span>
           </div>
         </div>
         
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2">
           <div className="relative">
             <input
               type="text"
               placeholder="Search account..."
-              className="w-64 px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-48 px-3 py-1.5 border border-gray-300 rounded text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
-            <button className="absolute right-2 top-1/2 transform -translate-y-1/2">
-              <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
           </div>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1.5 rounded text-sm font-medium transition-colors">
             Search
           </button>
         </div>
