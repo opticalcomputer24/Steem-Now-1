@@ -290,9 +290,9 @@ export const TransactionsList = () => (
     <h3 className="font-bold text-lg text-gray-800 mb-4">Latest Transactions</h3>
     <div className="space-y-2">
       {transactionsData.map((transaction, index) => (
-        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-          <div className="text-gray-600 text-sm">{transaction.date}</div>
-          <div className="text-blue-600 text-sm">{transaction.transaction}</div>
+        <div key={index} className="flex items-center justify-between p-2 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-b-0">
+          <div className="text-gray-600 text-sm w-20">{transaction.date}</div>
+          <div className="text-blue-600 text-sm flex-1 text-right">{transaction.transaction}</div>
         </div>
       ))}
     </div>
