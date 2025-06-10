@@ -269,16 +269,14 @@ export const PostsList = () => (
 export const CommentsList = () => (
   <div>
     <h3 className="font-bold text-lg text-gray-800 mb-4">Last 10 Comments</h3>
-    <div className="space-y-3">
+    <div className="space-y-2">
       {commentsData.map((comment, index) => (
-        <div key={index} className="p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-          <div className="flex items-start justify-between">
-            <span className="text-gray-600 mr-2">{index + 1}.</span>
-            <div className="flex-1">
-              <a href={comment.url} className="text-blue-600 hover:text-blue-800 text-sm">
-                {comment.comment}
-              </a>
-            </div>
+        <div key={index} className="p-2 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-b-0">
+          <div className="flex items-start">
+            <span className="text-gray-500 mr-3 w-6">{index + 1}.</span>
+            <a href={comment.url} className="text-blue-600 hover:text-blue-800 text-sm hover:underline flex-1">
+              {comment.comment}
+            </a>
           </div>
         </div>
       ))}
