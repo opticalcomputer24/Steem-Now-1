@@ -8,7 +8,15 @@ class SteemAPI {
       'https://steemd.privex.io',
       'https://rpc.steemviz.com'
     ];
-    this.client = new Client(this.nodes);
+    this.client = new Client(this.nodes[0]); // Use single node for better reliability
+    this.currentNodeIndex = 0;
+  }
+
+  // Fallback to next node if current fails
+  async switchNode() {
+    this.currentNodeIndex = (this.currentNodeIndex + 1) % this.nodes.length;
+    this.client = new Client(this.nodes[this.currentNodeIndex]);
+    console.log(`Switched to node: ${this.nodes[this.currentNodeIndex]}`);
   }
 
   async getAccount(username) {
