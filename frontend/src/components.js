@@ -249,16 +249,16 @@ export const WitnessVotes = () => (
 export const PostsList = () => (
   <div>
     <h3 className="font-bold text-lg text-gray-800 mb-4">Last 10 Posts</h3>
-    <div className="space-y-3">
+    <div className="space-y-2">
       {postsData.map((post, index) => (
-        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-          <div className="flex-1">
-            <span className="text-gray-600 mr-2">{index + 1}.</span>
-            <a href={post.url} className="text-blue-600 hover:text-blue-800 text-sm">
+        <div key={index} className="flex items-center justify-between p-2 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-b-0">
+          <div className="flex items-center">
+            <span className="text-gray-500 mr-3 w-6">{index + 1}.</span>
+            <a href={post.url} className="text-blue-600 hover:text-blue-800 text-sm hover:underline">
               {post.title}
             </a>
           </div>
-          <div className="text-green-600 font-medium text-sm">{post.value}</div>
+          <div className="text-green-600 font-medium text-sm ml-4">{post.value}</div>
         </div>
       ))}
     </div>
